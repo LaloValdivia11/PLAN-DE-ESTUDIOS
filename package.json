@@ -1,0 +1,25 @@
+{
+  "name": "plan-de-estudios",
+  "version": "1.0.0",
+  "description": "plan de estudio ",
+  "main": "index.js",
+  "type": "module",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaloValdivia11/PLAN-DE-ESTUDIOS.git"
+  },
+  "author": "Eduardo Valdivia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaloValdivia11/PLAN-DE-ESTUDIOS/issues"
+  },
+  "homepage": "https://github.com/LaloValdivia11/PLAN-DE-ESTUDIOS#readme",
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "typescript": "^5.9.2"
+  }
+}
