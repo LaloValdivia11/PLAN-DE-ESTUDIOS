@@ -1,12 +1,11 @@
-import type Developer from "./Developer.ts";
-import Engineer from "./Engineer.ts";
+import type Developer from "./entity/Developer.ts";
 
 export default class Team {
-    name: string;
-    lead: Developer;
+  name: string;
+  lead: Developer;
 
-    constructor(name: string, lead: Developer){
-        this.name = name
-        this.lead = lead;
-    }
+  constructor(name: string, lead: Developer){
+    this.name = name
+    this.lead = lead;
+  }
 }
