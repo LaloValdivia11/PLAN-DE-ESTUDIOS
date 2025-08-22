@@ -1,0 +1,1 @@
+{"version":3,"file":"Engineer.d.ts","sourceRoot":"","sources":["../../models/Engineer.ts"],"names":[],"mappings":"AAAA,OAAO,EAAiB,KAAK,EAAqB,MAAM,sBAAsB,CAAC;AAE/E,qBACa,QAAS,SAAQ,KAAK;IAEjC,QAAQ,EAAG,MAAM,CAAC;IAGlB,GAAG,CAAC,EAAE,MAAM,CAAC;IAGb,KAAK,CAAC,EAAE,MAAM,CAAC;CAChB"}

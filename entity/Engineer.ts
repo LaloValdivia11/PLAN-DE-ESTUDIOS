@@ -1,4 +1,4 @@
-import Team from "../Team.ts";
+import Team from "./Team.js";
 
 export default class Engineer {
   fullName: string;

@@ -1,5 +1,5 @@
-import { Table, Column, Model, DataType, HasMany } from "sequelize-typescript";
-import { Developer } from "./Developer.ts";
+import { Table, Column, Model, DataType, HasMany, ForeignKey,  BelongsTo} from "sequelize-typescript";
+import { Developer } from "./Developer.js";
 
 @Table({ tableName: "teams", timestamps: true })
 export class Team extends Model {
@@ -8,4 +8,6 @@ export class Team extends Model {
 
   @HasMany(() => Developer)
   developers!: Developer[];
+
+  
 }

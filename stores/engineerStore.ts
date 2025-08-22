@@ -1,5 +1,6 @@
-import { Engineer } from "../models/Engineer.ts";
-import db from '../db.ts';
+import { Engineer as EngineerModel } from "../models/Engineer.js";
+import Engineer from "../entity/Engineer.js";
+import db from '../db.js';
 
 type DatabaseType = typeof db;
 
@@ -10,7 +11,12 @@ export default class EngineerStore {
     this.database = database;
   }
 
-  create(name: string, age: number, level: string){
-    Engineer.create({name, age,level })
+  async create(engineer: Engineer) {
+    return await EngineerModel.create({
+      fullName: engineer.fullName,
+      age: engineer.age,
+      level: engineer.level
+    });
   }
+  
 };

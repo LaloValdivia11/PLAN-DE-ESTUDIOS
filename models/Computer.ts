@@ -1,4 +1,4 @@
-import { Table, Column, Model, DataType } from "sequelize-typescript";
+import { Table, Column, Model, DataType, HasOne } from "sequelize-typescript";
 
 @Table({ tableName: "computers", timestamps: true })
 export class Computer extends Model {

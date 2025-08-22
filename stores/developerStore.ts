@@ -1,5 +1,5 @@
-import { Developer } from "../models/Developer.ts";
-import db from '../db.ts';
+import { Developer } from "../models/Developer.js";
+import db from '../db.js';
 
 type DatabaseType = typeof db;
 
@@ -10,8 +10,7 @@ export default class DeveloperStore {
     this.database = database;
   }
 
-  create() {
-    // create: (name: string, age: number, teamId?: number, engineerId?: number) =>
-    //   Developer.create({ name, age, teamId, engineerId }),
+  create(engineerId: number, teamId: number, computerId: number) {
+    return Developer.create({ engineerId, teamId, computerId})
   }
 };

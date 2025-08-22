@@ -1,5 +1,6 @@
-import { Computer } from "../models/Computer.ts";
-import db from '../db.ts';
+import { Computer as ComputerModel} from "../models/Computer.js";
+import Computer from "../entity/Computer.js";
+import db from '../db.js';
 
 type DatabaseType = typeof db;
 
@@ -10,8 +11,11 @@ export default class ComputerStore  {
     this.database = database;
   }
 
-  create() {
-    // create: (brand: string, model: string, developerId: number) =>
-    //   Computer.create({ brand, model, developerId }),
+  create(computer: Computer) {
+    return ComputerModel.create(
+      { brand: computer.brand,
+        serialNumber: computer.serialNumber
+      }
+    )
   }
 };

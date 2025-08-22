@@ -1,5 +1,6 @@
-import { Team } from "../models/Team.ts";
-import db from '../db.ts';
+import { Team } from "../models/Team.js";
+import db from '../db.js';
+import Developer from "../entity/Developer.js";
 
 type DatabaseType = typeof db;
 
@@ -10,7 +11,7 @@ export default class TeamStore {
     this.database = database;
   }
 
-  create() {
-    //create: (name: string) => Team.create({ name }),
+  create(name: string) {
+    return Team.create({ name })
   }
 };

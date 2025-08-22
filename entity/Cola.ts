@@ -1,21 +1,15 @@
 export default class Cola {
-    _putFirstTask: string[] = [];
-    _getFirstValue: string;
+  private tasks: string[] = [];
 
-    constructor(putFirstValue:string[], getFirstValue: string){
-        this._putFirstTask = putFirstValue;
-        this._getFirstValue = getFirstValue;
-    }
+  constructor(tasks:string[] = []){
+    this.tasks = tasks;
+  }
 
-    get putFirstTask(): any {
-        return this.putFirstTask;
-    }
+  takeTask(task: string) {
+    this.tasks[this.tasks.length] = task; 
+  }
 
-    set putFirstTask (putFirstValue)  {
-        this._putFirstTask = putFirstValue;
-    }
-
-    get getFirstValue() {
-        return this._getFirstValue
-    }
+  get task(): string  | undefined {
+    return this.tasks[0];
+  }
 }

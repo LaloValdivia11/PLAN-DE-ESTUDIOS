@@ -1,20 +1,24 @@
-import Engineer from "./Engineer.ts";
-import Team from "../Team.ts";
-import Cola from "./Cola.ts";
+import Engineer from "./Engineer.js";
+import Team from "./Team.js";
+import Cola from "./Cola.js";
 
 export default class Developer extends Engineer{
+  idDeveloper: number;
   team: Team | undefined;
-  task: Cola | undefined;
+  cola: Cola;
 
-  constructor(fullName: string, age: number, level: string){
+  constructor(fullName: string, age: number, level: string, idDeveloper: number){
     super(fullName, age, level);
+
+    this.idDeveloper = idDeveloper;
+    this.cola = new Cola();
   }
 
-  takeTask() {
-    return 'Tomaste la tarea: ' + this.task?._putFirstTask;
+  takeTask(task: string) {
+    this.cola?.takeTask(task)
   }
 
-  getTaskAssigned() {
-    return this.task;
+  get task(): string | undefined{
+    return this.cola?.task;
   }
 }
